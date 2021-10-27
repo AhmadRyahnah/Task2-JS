@@ -10,6 +10,10 @@ Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
 => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 */
 
+function tellFortune(jobTitle, geoLocation, partnerName, numChildren) {
+  return `You will be a ${jobTitle} in ${geoLocation}, and married to ${partnerName} with ${numChildren} kids.`;
+}
+
 
 /*
 2
@@ -24,6 +28,9 @@ Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
 
+function calculateDogAge(puppyAge) {
+  return `Your doggie is ${puppyAge * 7} years old in dog years!`;
+}
 
 /*
 3
@@ -37,7 +44,11 @@ Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
 
-
+function calculateSupply(age, amountPerDay) {
+  const maxAge = 100;
+  const totalAmount = (maxAge - age) * 365 * amountPerDay;
+  return `You will need ${totalAmount} cups of tea to last you until the ripe old age of ${maxAge}`;
+}
 /*
 4
 Write a function called greet that:
@@ -47,7 +58,9 @@ and it will return hello + name
 Ex: greet("Adam")
 => "Hello Adam"
 */
-
+function greet(name) {
+  return `Hello ${name}`;
+}
 
 /*
 5
@@ -65,6 +78,9 @@ function double('7') {
 }
 */
 
+function double(x) {
+  return 2 * x;
+}
 
 
 /*
@@ -83,6 +99,17 @@ function (x) double3 {
 
 */
 
+function double1(x) {
+  return 2 * x;
+}
+
+function double2(x) {
+  return 2 * x;
+}
+
+function double3(x) {
+  return 2 * x;
+}
 
 /*
 7
@@ -93,7 +120,9 @@ Ex: cube(4)
 => 64
 */
 
-
+function cube(x) {
+  return x * x * x;
+}
 /*
 8
 Write a function called multiply that:
@@ -105,6 +134,9 @@ Ex: multiply(5,4)
 => 20
 */
 
+function multiply(x, y) {
+  return x * y;
+}
 
 /*
 9
@@ -124,7 +156,13 @@ Ex: canIGetADrivingLicense(20)
 
 */
 
-
+function canIGetADrivingLicense(age) {
+  if (age >= 20) {
+    return 'yes you can';
+  } else {
+    return `please come back after ${20 - age} years to get one`;
+  }
+}
 /*
 10
 Write a function called sameLength
@@ -139,6 +177,13 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
+function sameLength(str1, str2) {
+  if (str1.length === str2.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
 11
@@ -153,7 +198,13 @@ Ex: largerNubmer(5,3)
 => 5
 */
 
-
+function largerNumber(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+}
 /*
 12
 Write a function called smallerNubmer
@@ -173,7 +224,15 @@ Ex: smallerNubmer(5,3,3)
 => 3
 
 */
-
+function smallerNumber(num1, num2, num3) {
+  if (num1 < num2 && num1 < num3) {
+    return num1;
+  } else if (num2 < num1 && num2 < num3) {
+    return num2;
+  } else {
+    return num3;
+  }
+}
 /*
 13
 Write a function called shorterString
@@ -199,7 +258,19 @@ Ex: shorterString("air","tr","car","github","by")
 => by
 
 */
-
+function shorterString(str1, str2, str3, str4, str5) {
+  if (str1.length < str2.length && str1.length < str3.length && str1.length < str4.length && str1.length < str5.length) {
+    return str1;
+  } else if (str2.length < str1.length && str2.length < str3.length && str2.length < str4.length && str2.length < str5.length) {
+    return str2;
+  } else if (str3.length < str1.length && str3.length < str2.length && str3.length < str4.length && str3.length < str5.length) {
+    return str3;
+  } else if (str4.length < str1.length && str4.length < str2.length && str4.length < str3.length && str4.length < str5.length) {
+    return str4;
+  } else {
+    return str5;
+  }
+}
 /*
 14
 Write a function called longerString
@@ -214,7 +285,17 @@ Ex: longerString("air","schoo","car","github")
 
 try all the cases (change the order of the longestString)
 */
-
+function longerString(str1, str2, str3, str4) {
+  if (str1.length > str2.length && str1.length > str3.length && str1.length > str4.length) {
+    return str1;
+  } else if (str2.length > str1.length && str2.length > str3.length && str2.length > str4.length) {
+    return str2;
+  } else if (str3.length > str1.length && str3.length > str2.length && str3.length > str4.length) {
+    return str3;
+  } else {
+    return str4;
+  }
+}
 /*
 15
 Write a function called isEven
@@ -228,7 +309,13 @@ Ex: isEven(2)
 => true
 
 */
-
+function isEven(num) {
+  if (num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
 16
@@ -244,6 +331,13 @@ Ex: isOdd(5)
 
 */
 
+function isOdd(num) {
+  if (num % 2 === 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 /*
 17
@@ -258,6 +352,13 @@ Ex: positive(-5)
 
 */
 
+function positive(num) {
+  if (num > 0) {
+    return num;
+  } else {
+    return -num;
+  }
+}
 
 /*
 18
@@ -272,6 +373,9 @@ Ex: fullName("Alex", "Mercer")
 => "Alex Mercer"
 */
 
+function fullName(firstName, lastName) {
+  return firstName + ' ' + lastName;
+}
 
 /*
 19
@@ -287,6 +391,9 @@ Ex: average(5,7,9,3,5)
 
 */
 
+function average(num1, num2, num3, num4, num5) {
+  return (num1 + num2 + num3 + num4 + num5) / 5;
+}
 
 /*
 20
@@ -302,7 +409,9 @@ Ex: randomNumber()
 => 0.475
 
 */
-
+function randomNumber() {
+  return Math.random()*1;
+}
 /*
 21
 Write a function called randomBetweenNumbers
@@ -318,7 +427,9 @@ Ex: randomBetweenNumbers(3,100)
 
 */
 
-
+function randomBetweenNumbers(num1, num2) {
+  return Math.random() * (num2 - num1) + num1;
+}
 /*
 22
 Write a function called scoreInUniversty
@@ -340,6 +451,19 @@ Ex: scoreInUniversty(71)
 => "C"
 */
 
+function scoreInUniversty(num) {
+  if (num >= 95) {
+    return 'A';
+  } else if (num >= 85) {
+    return 'B';
+  } else if (num >= 70) {
+    return 'C';
+  } else if (num >= 50) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+}
 
 /*
 23
@@ -359,6 +483,13 @@ Ex: counter()
 
 */
 
+function counter() {
+  var count = 0;
+  return function() {
+    count++;
+    return count;
+  }
+}
 
 /*
 24
@@ -391,3 +522,10 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
+function resetCounter() {
+  var count = 0;
+  return function() {
+    count++;
+    return count;
+  }
+}
